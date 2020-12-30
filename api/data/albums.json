@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "artistName": "Artist 1",
+    "albumName": "Album 1",
+    "songs": [
+      {
+        "songName": "Song 1"
+      },
+      {
+        "songName": "Song 2"
+      },
+      {
+        "songName": "Song 3"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "artistName": "Artist 2",
+    "albumName": "Album 2",
+    "songs": [
+      {
+        "songName": "Song 1"
+      },
+      {
+        "songName": "Song 2"
+      },
+      {
+        "songName": "Song 3"
+      }
+    ]
+  }
+]

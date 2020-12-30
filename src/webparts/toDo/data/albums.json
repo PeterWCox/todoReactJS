@@ -1,0 +1,26 @@
+[
+    {
+        "artistName": "Oceansize",
+        "albumName": "Nightwish",
+        "songs": [
+            {
+                "songName": "Hi Mum 1"
+            },
+            {
+                "songName": "Hi Mum 2"
+            },
+            {
+                "songName": "Hi Mum 3"
+            },
+            {
+                "songName": "Hi Mum 4"
+            },
+            {
+                "songName": "Hi Mum 5"
+            },
+            {
+                "songName": "Hi Mum 6"
+            }
+        ]
+    }
+]

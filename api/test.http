@@ -1,0 +1,42 @@
+
+
+
+### Get all albums
+GET http://localhost:5000/api/albums HTTP/1.1
+Content-Type: application/json
+
+### Get albums by Id
+GET http://localhost:5000/api/albums/1 HTTP/1.1
+Content-Type: application/json
+
+### Create Album
+POST http://localhost:5000/api/albums HTTP/1.1
+Content-Type: application/json
+
+{
+  "artistName": "Artist 3",
+  "albumName": "Album 1",
+  "songs": [
+      {
+        "songName": "Song 1"
+      },
+      {
+        "songName": "Song 2"
+      },
+      {
+        "songName": "Song 3"
+      }
+    ]
+}
+
+### Update Album
+PUT http://localhost:5000/api/albums/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "artistName": "Artist 99"
+}
+
+### Delete Album
+DELETE http://localhost:5000/api/albums/1 HTTP/1.1
+Content-Type: application/json
