@@ -10,6 +10,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'ToDoWebPartStrings';
 import ToDo from './components/ToDo';
 import { IToDoProps } from './components/IToDoProps';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export interface IToDoWebPartProps {
   description: string;

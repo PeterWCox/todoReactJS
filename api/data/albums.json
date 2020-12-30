@@ -1,34 +1,44 @@
 [
   {
     "id": "1",
-    "artistName": "Artist 1",
-    "albumName": "Album 1",
+    "artistName": "The Beatles",
+    "albumName": "Yellow Submarine",
     "songs": [
-      {
-        "songName": "Song 1"
-      },
-      {
-        "songName": "Song 2"
-      },
-      {
-        "songName": "Song 3"
-      }
+      "Yellow Submarine",
+      "Only a Northern Song",
+      "Hey Bulldog",
+      "Its all too much",
+      "All together now"
     ]
   },
   {
     "id": "2",
-    "artistName": "Artist 2",
-    "albumName": "Album 2",
+    "artistName": "Cold War Kids",
+    "albumName": "Robbers and Cowards",
     "songs": [
-      {
-        "songName": "Song 1"
-      },
-      {
-        "songName": "Song 2"
-      },
-      {
-        "songName": "Song 3"
-      }
+      "Hair Down",
+      "We Used to Vacation",
+      "Passing the Hat"
+    ]
+  },
+  {
+    "id": "3",
+    "artistName": "Passion Pit",
+    "albumName": "Manners",
+    "songs": [
+      "Little Secrets",
+      "The Reeling",
+      "Eyes as Candles"
+    ]
+  },
+  {
+    "id": "4",
+    "artistName": "Abba",
+    "albumName": "Mamma Mia",
+    "songs": [
+      "Mamma Mia",
+      "Mamma Mia 2",
+      "Hello"
     ]
   }
 ]

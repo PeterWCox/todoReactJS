@@ -1,6 +1,5 @@
 import Album from "../models/Album";
 import AlbumCollection from "../models/AlbumCollection";
-import Song from "../models/Song";
 import IAlbumRepository from './IAlbumRepository';
 import Axios from 'axios';
 import { plainToClass } from "class-transformer"; 
@@ -29,10 +28,7 @@ export default class AlbumRepository_API implements IAlbumRepository {
 
                     //Set the song list
                     jsonAlbum.songs.map(jsonSong => {
-
-                        let song = new Song();
-                        song.SongName = jsonSong.songName
-                        album.Songs.push(song);
+                        album.Songs.push(jsonSong);
                     });
 
                     albums.push(album);
@@ -41,9 +37,14 @@ export default class AlbumRepository_API implements IAlbumRepository {
             .catch(err => {
                 console.log(err);
             });
+
+         //Sort by concatenated album name ("The Beatles - Yellow Brick Road")
+         albums.sort((a, b) => a.getConcatenatedName().localeCompare(b.getConcatenatedName()))
         
         let albumCollection = new AlbumCollection();
         albumCollection.Albums = albums;
+
+       
 
         return albumCollection;
     }

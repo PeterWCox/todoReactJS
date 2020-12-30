@@ -1,5 +1,4 @@
 import { Guid } from '@microsoft/sp-core-library';
-import Song from './Song';
 
 export default class Album {
 
@@ -8,7 +7,7 @@ export default class Album {
     public Id: string;
     public ArtistName : string;
     public AlbumName : string;
-    public Songs : Song[];
+    public Songs : string[];
     public IsDisplayed: boolean = true;
 
     //Methods

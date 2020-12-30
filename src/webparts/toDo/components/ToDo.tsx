@@ -5,12 +5,21 @@ import AlbumRepository from '../repositories/IAlbumRepository';
 import Album from '../models/Album';
 import {IToDoProps} from './IToDoProps';
 
+
+//Bootstrap 
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+import Button from 'react-bootstrap/Button';
+
 //Components
 import AlbumEntry from '../components/AlbumEntry';
 import AlbumCollection from '../models/AlbumCollection';
 import IAlbumCollectionRepository from '../repositories/IAlbumRepository';
 import AlbumRepository_Stub from '../repositories/AlbumRepository_Stub';
 import AlbumRepository_API from '../repositories/AlbumRepository_API';
+import Header from './Header';
 
 export interface IToDoState {
   albumCollection: AlbumCollection;
@@ -36,8 +45,6 @@ export default class ToDo extends React.Component<IToDoProps, IToDoState> {
 
   public async componentDidMount() {
 
-    console.log("Init ComponentDidMount");
-
     let repo: IAlbumCollectionRepository = new AlbumRepository_API();
 
     let albumCollection: AlbumCollection = await repo.getAlbumCollection();
@@ -45,8 +52,6 @@ export default class ToDo extends React.Component<IToDoProps, IToDoState> {
     this.setState({
       albumCollection: albumCollection
     });
-
-    console.log("Finish ComponentDidMount");
 
   }
   
@@ -83,33 +88,34 @@ export default class ToDo extends React.Component<IToDoProps, IToDoState> {
     // )
 
     return (
-      <div className={ styles.toDo }>
-        <div className={ styles.container }>
-          <div className={ styles.row }>
-            <div className={ styles.column }>
+      <div className={styles.toDo}>
+        <Container style={{border: "1px solid blue", margin: "30 30 30 30"}}>
 
-              <u onClick={() => this.onAlbumCollectionClick()}>
-                <h1>Albums</h1>
-              </u>
+          <Header text="Albums" onAlbumCollectionClick={this.onAlbumCollectionClick} albums={this.state.albumCollection.Albums}/>
 
+          
+          <Row>
+            <Col>
               <ul>
                 {
                   this.state.albumCollection.Albums.map((album, index) => {
                     return (
                       <AlbumEntry 
-                          key={index} 
-                          album={album} 
-                          onAlbumClick={this.onAlbumClick}
+                        key={index} 
+                        album={album} 
+                        onAlbumClick={this.onAlbumClick}
                       />
                     );                  
                   })
                 }
               </ul>
-             
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
+
+
+      
     );
   }
 

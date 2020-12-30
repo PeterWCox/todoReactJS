@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Album from '../models/Album';
+import AlbumIcon from './AlbumIcon';
 
 interface IAlbumEntryProps {
     album: Album;
@@ -8,21 +9,26 @@ interface IAlbumEntryProps {
 
 const AlbumEntry = (props: IAlbumEntryProps) => {
 
-    let color: string = (props.album.IsDisplayed) ? "#00ff00" : "#ff0000";
-
     return (
         <>
-            <li onClick={(e) => props.onAlbumClick(props.album.Id)}>
-                {props.album.getConcatenatedName()}
-                <span><i style={{color: `${color}`}}>X</i></span>
-            </li> 
+            <li >
+                {props.album.getConcatenatedName()}&nbsp;      
+                <span>
+                    <AlbumIcon 
+                        album={props.album} 
+                        onAlbumClick={props.onAlbumClick} 
+                    />
+                </span>
+                
+            </li>
+           
        
             <ul>
                 {
                     props.album.IsDisplayed ? 
                         props.album.Songs.map(song => {
                             return (
-                                <li>{song.SongName}</li>
+                                <li>{song}</li>
                             )
                         }) : null                     
                 }

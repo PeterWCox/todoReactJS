@@ -19,9 +19,12 @@
     "@microsoft/sp-property-pane": "1.11.0",
     "@microsoft/sp-webpart-base": "1.11.0",
     "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
     "class-transformer": "^0.3.1",
     "office-ui-fabric-react": "6.214.0",
     "react": "16.8.5",
+    "react-bootstrap": "^1.4.0",
+    "react-bootstrap-icons": "^1.2.2",
     "react-dom": "16.8.5",
     "spfx-fast-serve": "^1.11.0"
   },
